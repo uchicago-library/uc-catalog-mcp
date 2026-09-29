@@ -1,0 +1,79 @@
+{
+  "resultCount": 118,
+  "records": [
+    {
+      "id": "12899207",
+      "title": "Sauron defeated : the end of the third age /",
+      "authors": {
+        "primary": {
+          "Tolkien, Christopher": []
+        },
+        "secondary": {
+          "Tolkien, J. R. R. (John Ronald Reuel), 1892-1973": []
+        },
+        "corporate": []
+      },
+      "formats": [
+        "E-Resource",
+        "Book"
+      ],
+      "buildings": [
+        "Internet"
+      ],
+      "callNumbers": [
+        "PR6039.O32L63743 1992"
+      ],
+      "recordPage": "/vufind/Record/12899207"
+    },
+    {
+      "id": "14521963",
+      "title": "The west of Middle-Earth at the end of the Third Age /",
+      "authors": {
+        "primary": {
+          "Tolkien, Christopher": []
+        },
+        "secondary": {
+          "Tolkien, J. R. R. (John Ronald Reuel), 1892-1973": [],
+          "Tolkien, J. R. R.": []
+        },
+        "corporate": []
+      },
+      "formats": [
+        "Map",
+        "Print"
+      ],
+      "buildings": [
+        "Regenstein Library"
+      ],
+      "callNumbers": [
+        "G9930 1995 .T6"
+      ],
+      "recordPage": "/vufind/Record/14521963"
+    }
+  ],
+  "facets": {
+    "format": [
+      {
+        "value": "Book",
+        "translated": "Book",
+        "count": 100,
+        "href": "?limit=2&lookfor=tolkien&type=Author&filter%5B%5D=format%3A%22Book%22"
+      },
+      {
+        "value": "Print",
+        "translated": "Print",
+        "count": 91,
+        "href": "?"
+      }
+    ],
+    "building": [
+      {
+        "value": "Regenstein Library",
+        "translated": "Regenstein Library",
+        "count": 40,
+        "href": "?"
+      }
+    ]
+  },
+  "status": "OK"
+}
