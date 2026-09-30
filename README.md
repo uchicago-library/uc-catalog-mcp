@@ -16,23 +16,37 @@ Override the API base with `UC_CATALOG_BASE` (default
 
 ## Install
 
+Clone this repository, then install dependencies into that checkout (editable
+install is enough for local MCP use):
+
 ```bash
+cd /path/to/uc-catalog-mcp
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -e ".[dev]"
 ```
 
-## Run (MCP hosts)
+Requires [uv](https://docs.astral.sh/uv/) on your `PATH` for the Claude config
+below (`uv run` uses the project environment).
 
-Point your MCP host at the stdio entry point:
+## Claude / MCP host config
+
+Point Claude Desktop (or another stdio MCP host) at the checkout with
+`uv run --directory`. Replace `/path/to/uc-catalog-mcp` with your clone path:
 
 ```json
 {
   "mcpServers": {
     "uc-catalog": {
-      "command": "python",
-      "args": ["-m", "uc_catalog_mcp"],
-      "cwd": "/path/to/uc-catalog-mcp",
+      "command": "uv",
+      "args": [
+        "run",
+        "--directory",
+        "/path/to/uc-catalog-mcp",
+        "python",
+        "-m",
+        "uc_catalog_mcp"
+      ],
       "env": {
         "UC_CATALOG_BASE": "https://catalog.lib.uchicago.edu/vufind"
       }
@@ -41,7 +55,12 @@ Point your MCP host at the stdio entry point:
 }
 ```
 
-Or use the console script after install: `uc-catalog-mcp`.
+Do **not** rely on `"command": "python"` plus `"cwd"` alone — that form often
+fails to resolve the package in Claude’s MCP launcher. `uv run --directory`
+keeps the working tree and environment explicit.
+
+After an editable install you can also run the console script
+`uc-catalog-mcp` from a shell for a quick smoke check.
 
 ## Tools
 
