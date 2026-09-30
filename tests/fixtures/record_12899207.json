@@ -1,0 +1,30 @@
+{
+  "resultCount": 1,
+  "records": [
+    {
+      "id": "12899207",
+      "title": "Sauron defeated : the end of the third age /",
+      "authors": {
+        "primary": {
+          "Tolkien, Christopher": []
+        },
+        "secondary": {
+          "Tolkien, J. R. R. (John Ronald Reuel), 1892-1973": []
+        },
+        "corporate": []
+      },
+      "formats": [
+        "E-Resource",
+        "Book"
+      ],
+      "buildings": [
+        "Internet"
+      ],
+      "callNumbers": [
+        "PR6039.O32L63743 1992"
+      ],
+      "recordPage": "/vufind/Record/12899207"
+    }
+  ],
+  "status": "OK"
+}
